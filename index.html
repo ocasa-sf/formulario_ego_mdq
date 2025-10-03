@@ -1,27 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-  <meta charset="UTF-8">
-  <title>Formulario OCASA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-    }
-  </style>
-</head>
-    
-  <body>
-  <!doctype html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Formulario de contacto</title>
+  <title>Formulario OCASA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
   <style>
     :root {
       --primary:#19b5c6;
@@ -40,20 +23,9 @@
       margin:40px auto;
       padding:0 20px;
     }
-    .header-img {
-      text-align:center;
-      margin-bottom:24px;
-    }
-    .header-img img {
-      max-width:240px;
-      height:auto;
-      display:inline-block;
-    }
-    form {
-      background:var(--white);
-      border-radius:16px;
-      padding:24px;
-    }
+    .header-img { text-align:center; margin-bottom:24px; }
+    .header-img img { max-width:240px; height:auto; display:inline-block; }
+    form { background:var(--white); border-radius:16px; padding:24px; }
     .field { margin-bottom:20px; }
     label { display:block; font-weight:600; margin:4px 0 8px; }
     input, select, textarea {
@@ -67,10 +39,23 @@
       background:var(--white);
     }
     input::placeholder, textarea::placeholder { color:#a3a3a3; }
-    input:focus, select:focus, textarea:focus {
-      box-shadow:0 0 0 4px rgba(25,181,198,.15);
-    }
+    input:focus, select:focus, textarea:focus { box-shadow:0 0 0 4px rgba(25,181,198,.15); }
     textarea { min-height:140px; resize:vertical; }
+
+    .checkbox-group { margin: 12px 0 20px; }
+    .checkbox-group label {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;           
+      font-weight:600;
+      margin:0;
+    }
+    .checkbox-group input[type="checkbox"] {
+      width:auto;
+      height:auto;
+      accent-color: var(--primary); 
+    }
+
     .actions { margin-top:20px; text-align:center; }
     button {
       width:100%;
@@ -103,7 +88,6 @@
 
       <input type="hidden" name="oid" value="00D50000000dFkr">
       <input type="hidden" name="retURL" value="https://ocasa.com/logistica-general/es/quotation?from=warehousing">
-
       <input type="hidden" id="00NVU000004Rb4P" name="00NVU000004Rb4P" value="E-go MDQ">
 
       <div class="field">
@@ -161,11 +145,19 @@
         </select>
       </div>
 
+      <div class="checkbox-group">
+        <label for="Opt_in__c">
+          <input type="checkbox" id="Opt_in__c" name="Opt_in__c" value="true" checked>
+          Acepto recibir comunicaciones de Ocasa
+        </label>
+      </div>
+
       <div class="actions">
         <button type="submit">ENVIAR</button>
       </div>
     </form>
   </div>
+
   <script>
     (function () {
       var img = document.getElementById('ocasaLogo');
@@ -189,7 +181,4 @@
   </script>
 </body>
 </html>
-    
-  </body>
-  
-</html>
+
