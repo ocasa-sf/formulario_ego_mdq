@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    
+
+  </head>
+    
+  <body>
+  <!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de contacto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary:#19b5c6;
+      --primary-hover:#14a2b1;
+      --border:#27c1d2;
+      --bg:#f5fbfc;
+      --white:#fff;
+    }
+    body {
+      margin:0;
+      font-family:'Montserrat', sans-serif;
+      background:var(--bg);
+    }
+    .wrap {
+      max-width:600px;
+      margin:40px auto;
+      padding:0 20px;
+    }
+    .header-img {
+      text-align:center;
+      margin-bottom:24px;
+    }
+    .header-img img {
+      max-width:240px;
+      height:auto;
+      display:inline-block;
+    }
+    form {
+      background:var(--white);
+      border-radius:16px;
+      padding:24px;
+    }
+    .field { margin-bottom:20px; }
+    label { display:block; font-weight:600; margin:4px 0 8px; }
+    input, select, textarea {
+      width:100%;
+      box-sizing:border-box;
+      border:1.5px solid var(--border);
+      border-radius:14px;
+      padding:14px 16px;
+      font:inherit;
+      outline:none;
+      background:var(--white);
+    }
+    input::placeholder, textarea::placeholder { color:#a3a3a3; }
+    input:focus, select:focus, textarea:focus {
+      box-shadow:0 0 0 4px rgba(25,181,198,.15);
+    }
+    textarea { min-height:140px; resize:vertical; }
+    .actions { margin-top:20px; text-align:center; }
+    button {
+      width:100%;
+      border:0;
+      border-radius:14px;
+      padding:16px 18px;
+      background:var(--primary);
+      color:#fff;
+      font-weight:700;
+      letter-spacing:.4px;
+      cursor:pointer;
+      transition:.15s transform ease, .15s background ease;
+      font-family:'Montserrat', sans-serif;
+    }
+    button:hover { background:var(--primary-hover); transform:translateY(-1px); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="header-img">
+      <img id="ocasaLogo"
+           src="https://drive.google.com/uc?export=download&id=1b717TVboiCds-2x4rPcBhd6ZjqJ-p52n"
+           alt="OCASA Logo"
+           loading="lazy"
+           referrerpolicy="no-referrer" />
+    </div>
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D50000000dFkr" method="POST" accept-charset="UTF-8">
+
+      <input type="hidden" name="oid" value="00D50000000dFkr">
+      <input type="hidden" name="retURL" value="https://ocasa.com/logistica-general/es/quotation?from=warehousing">
+
+      <input type="hidden" id="00NVU000004Rb4P" name="00NVU000004Rb4P" value="E-go MDQ">
+
+      <div class="field">
+        <label for="first_name">Nombre</label>
+        <input id="first_name" name="first_name" type="text" placeholder="Ingresá tu nombre" maxlength="40" required>
+      </div>
+
+      <div class="field">
+        <label for="last_name">Apellido</label>
+        <input id="last_name" name="last_name" type="text" placeholder="Ingresá tu apellido" maxlength="80" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="Ingresá tu email" maxlength="80" required>
+      </div>
+
+      <div class="field">
+        <label for="mobile">Teléfono</label>
+        <input id="mobile" name="mobile" type="tel" maxlength="40" placeholder="Ingresá un teléfono de contacto">
+      </div>
+
+      <div class="field">
+        <label for="company">Empresa</label>
+        <input id="company" name="company" type="text" placeholder="Ingresá la empresa que representás" maxlength="40" required>
+      </div>
+
+      <div class="field">
+        <label for="Rubro__c">Rubro</label>
+        <select id="Rubro__c" name="Rubro__c" required>
+          <option value="">-- Seleccioná --</option>
+          <option value="Automotriz">Automotriz</option>
+          <option value="Consumo Masivo">Consumo Masivo</option>
+          <option value="Energía">Energía</option>
+          <option value="Gobierno">Gobierno</option>
+          <option value="Moda & Fashion">Moda & Fashion</option>
+          <option value="Retail">Retail</option>
+          <option value="Salud & Farma">Salud & Farma</option>
+          <option value="Servicios Financieros">Servicios Financieros</option>
+          <option value="Tecnología">Tecnología</option>
+          <option value="Telecomunicaciones">Telecomunicaciones</option>
+          <option value="Otros">Otros</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="00NVU000004Raxx">Puesto</label>
+        <select id="00NVU000004Raxx" name="00NVU000004Raxx" title="Puesto">
+          <option value="">-- Seleccioná --</option>
+          <option value="Ventas">Ventas</option>
+          <option value="Administración">Administración</option>
+          <option value="Gerencia">Gerencia</option>
+          <option value="Operaciones">Operaciones</option>
+          <option value="IT">IT</option>
+        </select>
+      </div>
+
+      <div class="actions">
+        <button type="submit">ENVIAR</button>
+      </div>
+    </form>
+  </div>
+  <script>
+    (function () {
+      var img = document.getElementById('ocasaLogo');
+      var id = '1b717TVboiCds-2x4rPcBhd6ZjqJ-p52n';
+      var triedView = false, triedThumb = false;
+
+      img.addEventListener('error', function () {
+        if (!triedView) {
+          triedView = true;
+          img.src = 'https://drive.google.com/uc?export=view&id=' + id;
+          return;
+        }
+        if (!triedThumb) {
+          triedThumb = true;
+          img.src = 'https://drive.google.com/thumbnail?id=' + id + '&sz=w600';
+          return;
+        }
+        img.style.display = 'none';
+      });
+    })();
+  </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>
